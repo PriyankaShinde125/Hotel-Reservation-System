@@ -3,7 +3,6 @@ package org.example;
 public class Hotel {
     String name;
     Double regularCustomerRate;
-    Double totalRate;
 
     public Hotel() {
     }
@@ -25,14 +24,6 @@ public class Hotel {
         return regularCustomerRate;
     }
 
-    public Double getTotalRate() {
-        return totalRate;
-    }
-
-    public void setTotalRate(int numberOfDays) {
-        this.totalRate = regularCustomerRate * numberOfDays;
-    }
-
     public void setRegularCustomerRate(Double regularCustomerRate) {
         this.regularCustomerRate = regularCustomerRate;
     }
@@ -42,7 +33,7 @@ public class Hotel {
     public String toString() {
         return "{" +
                 "Hotel='" + name + '\'' +
-                ", Total Rate=" + totalRate +
+                ",Rate=" + regularCustomerRate +
                 '}';
     }
 }
